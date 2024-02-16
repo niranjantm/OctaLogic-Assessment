@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import sequelize from "./db/sequelize.js";
 import userRouter from "./routes/user.routes.js"
+import vehicleRouter from "./routes/vehicle.routes.js";
+import bookingRouter from "./routes/booking.routes.js";
 
 
 
@@ -17,6 +19,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api",userRouter)
+app.use("/api",vehicleRouter);
+app.use("/api",bookingRouter)
 
 
 

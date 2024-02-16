@@ -3,7 +3,7 @@ import User from "../model/user.model.js";
 
 const router = express.Router();
 
-router.post("/user/post", async (req, res, next) => {
+router.post("/post/user", async (req, res, next) => {
   const { first_name, last_name } = req.body;
   let isUser = await User.findOne({ where: { first_name, last_name } });
   if (
