@@ -48,7 +48,11 @@ function VehicleForm4() {
             </div>
             <button type='button' className='bg-red-500 p-3 rounded-md' onClick={handleBooking}>Book Now</button>
         </form>
-        {status&&<p className='text-xl text-red-500 text-center'>{status}</p>}
+        {status&&<div>
+            <p className='text-xl text-red-500 text-center'>{status}</p>
+            
+            </div>}
+
     </div>
   )
 }

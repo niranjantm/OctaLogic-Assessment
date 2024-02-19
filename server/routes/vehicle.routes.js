@@ -13,4 +13,13 @@ router.get("/get/:type",async(req,res,next)=>{
     }
     
 })
+
+router.get("/available",async(req,res,next)=>{
+    try{
+        const vehicle = await Vehicle.findAll({where:{available:false}})
+        res.status(200).json(vehicle);
+    }catch(error){
+        res.send(400)
+    }
+})
 export default router
